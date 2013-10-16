@@ -1,0 +1,20 @@
+[
+  {
+    "model": "main.page",
+    "pk": 1,
+    "fields": {
+      "title": "John",
+      "content": "Ферма «Усадьба Княжичи» — семейное фермерское хозяйство расположенное в 450 км от Москвы, на границе Калужской и Брянской областей, на берегу живописного озера.",
+      "alias":   "mainpage"
+    }
+  },
+  {
+    "model": "main.page",
+    "pk": 2,
+    "fields": {
+      "title": "Paul",
+      "content": "McCartney",
+      "alias": "contact"
+    }
+  }
+]

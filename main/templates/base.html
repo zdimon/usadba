@@ -1,0 +1,59 @@
+{% load staticfiles %}
+{% load url from future %}
+<!DOCTYPE html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="MainApp">
+    <head>
+        <meta charset="utf-8">
+        <title>{% block title %}{% endblock %}</title>
+        <link rel="stylesheet" href="{% static 'styles/style.css' %}" type="text/css" media="all" />
+    </head>
+     <body class="home blog gecko" data-twttr-rendered="true">
+       <div id="color-stripes"></div>
+         <div id="header">
+           <div class="container clearfix">
+             <div id="logo-area">
+                <a href="{% url 'home' %}">
+				<img id="logo" alt="Усадьба Княжичи" src="{% static 'images/logo.png'%}">
+				</a>
+                <a href="">
+                <img id="slogan" alt="Семейная ферма натуральных деревенских продуктов" src="{% static 'images/slogan.png'%}">
+                <p id="slogan" style="display: none;">Просто. Вкусно. +7 (495) 792 49 10</p>
+                </a>
+             </div>
+             
+             <div id="login-form">
+			   <ul>
+			     <li>
+			       <a class="simplemodal-login" href="http://xn----7sbadopoap4a1bx6d4c8b.xn--p1ai/wp-login.php?redirect_to=%2F">Войти</a>
+			     </li>
+			   </ul>
+			 </div>
+			 
+			 
+			 <div class="clear"></div>
+			 <div id="menu-content">
+			 <div id="menu-shadow"></div>
+			   <ul id="secondary-menu" class="nav clearfix">
+			   <li><a href="{% url 'url_news' %}">О нашей семье</a></li>
+			   <li><a href="{% url 'url_products' %}">Каталог продуктов</a></li>
+				<li id="menu-item-76" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-76"><a href="http://xn----7sbadopoap4a1bx6d4c8b.xn--p1ai/ферма/%d0%bf%d1%80%d0%be%d0%b4%d1%83%d0%ba%d1%82%d1%8b">Каталог продуктов</a></li>
+				<li id="menu-item-77" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-77"><a href="http://xn----7sbadopoap4a1bx6d4c8b.xn--p1ai/%d0%b4%d0%be%d1%81%d1%82%d0%b0%d0%b2%d0%ba%d0%b0">Доставка и оплата</a></li>
+				<li id="menu-item-314" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-314"><a href="http://xn----7sbadopoap4a1bx6d4c8b.xn--p1ai/ферма/%d1%80%d0%b5%d1%86%d0%b5%d0%bf%d1%82%d1%8b">Рецепты</a></li>
+				<li id="menu-item-1402" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1402"><a href="http://xn----7sbadopoap4a1bx6d4c8b.xn--p1ai/ферма/%d0%be%d1%82%d0%b7%d1%8b%d0%b2%d1%8b">Отзывы</a>
+				<ul class="sub-menu">
+					<li id="menu-item-1353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1353"><a href="http://xn----7sbadopoap4a1bx6d4c8b.xn--p1ai/%d0%be%d1%81%d1%82%d0%b0%d0%b2%d0%b8%d1%82%d1%8c-%d0%be%d1%82%d0%b7%d1%8b%d0%b2">Оставить отзыв</a></li>
+				</ul>
+				</li>
+				<li id="menu-item-118" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-118"><a href="http://xn----7sbadopoap4a1bx6d4c8b.xn--p1ai/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b">Контакты</a></li>
+				</ul>
+			 </div>
+
+
+             
+           </div>
+         </div>
+    
+    
+    {% block content %}{% endblock %}
+    </body>
+</html>
